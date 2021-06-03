@@ -1,7 +1,7 @@
 #ifndef PONY_HPP
 # define PONY_HPP
 
-#include <iostream>
+# include <iostream>
 
 # define GREEN		"\033[0;32m"
 # define RED		"\033[0;31m"
@@ -10,15 +10,13 @@
 
 class	Pony
 {
-
 private:
-
 	std::string	name;
 	std::string	color;
 	std::string	favorite_meal;
 
 public:
-
+				Pony();
 	void		SetName(std::string str);
 	void		SetColor(std::string str);
 	void		SetFavoriteMeal(std::string str);
@@ -26,9 +24,7 @@ public:
 	std::string	GetColor();
 	std::string	GetFavoriteMeal();
 	void		eat();
-	Pony();
-	~Pony();
-
+				~Pony();
 };
 
 #endif

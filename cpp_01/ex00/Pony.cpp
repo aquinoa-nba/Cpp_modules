@@ -1,5 +1,12 @@
 #include "Pony.hpp"
 
+Pony::Pony()
+{
+	std::cout	<< "Pony was " \
+				<< GREEN << "born" << NO_COLOR \
+				<< std::endl;
+}
+
 void	Pony::SetName(std::string str)
 {
 	name = str;
@@ -32,15 +39,17 @@ std::string	Pony::GetFavoriteMeal()
 
 void	Pony::eat()
 {
-	std::cout << "Pony " << name << YELLOW << " eating " << NO_COLOR << favorite_meal << std::endl;
-}
-
-Pony::Pony()
-{
-	std::cout << "Pony was "<< GREEN << "born" << NO_COLOR << std::endl;
+	std::cout	<< "Pony " \
+				<< name \
+				<< YELLOW << " eating " << NO_COLOR \
+				<< favorite_meal \
+				<< std::endl;
 }
 
 Pony::~Pony()
 {
-	std::cout << "Pony " << name << RED << " died" << NO_COLOR << std::endl;
+	std::cout	<< "Pony " \
+				<< name \
+				<< RED << " died" << NO_COLOR \
+				<< std::endl;
 }
