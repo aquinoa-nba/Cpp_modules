@@ -1,40 +1,35 @@
 #include "ZombieHorde.hpp"
 
-ZombieHorde::ZombieHorde(int N)
+ZombieHorde::ZombieHorde(int numOfZombie)
 {
-	this->NumOfZombies = N;
-	this->Zombies = new Zombie[this->NumOfZombies];
+	_numOfZombies = numOfZombie;
+	_zombies = new Zombie[_numOfZombies];
 
 	std::cout 	<< std::endl;
-	for (int i = 0; i < N; i++)
+	for (int i = 0; i < _numOfZombies; i++)
 	{
-		this->Zombies[i].SetName(randomZombieName());
-		this->Zombies[i].SetType(randomZombieType());
-		std::cout 	<< "Zombie\t" \
-					<< GREEN << Zombies[i].GetName() << NO_COLOR \
-					<< "\trise from the dead!" << std::endl;
+		_zombies[i].setName(randomZombieName());
+		_zombies[i].setType(randomZombieType());
+		std::cout << "Zombie\t" GREEN << _zombies[i].getName() << NO_COLOR \
+							"\trise from the dead!" << std::endl;
 		sleep(1);
 	}
-	std::cout 	<< std::endl	<< "\tHORDE OF " \
-								<< BOLD_RED << this->NumOfZombies << NO_COLOR \
-								<< " ZOMBIES " \
-								<< BOLD_RED << "ATTACK" << NO_COLOR \
-								<< "!!!" << std::endl << std::endl;
+	std::cout << std::endl << "\tHORDE OF " BOLD_RED << _numOfZombies << NO_COLOR \
+								" ZOMBIES " BOLD_RED "ATTACK" NO_COLOR "!!!" \
+									<< std::endl << std::endl;
 }
 
 void	ZombieHorde::announce()
 {
-	for (int i = 0; i < this->NumOfZombies; i++)
-		this->Zombies[i].announce();
+	for (int i = 0; i < _numOfZombies; i++)
+		_zombies[i].announce();
 	std::cout 	<< std::endl;
 }
 
 ZombieHorde::~ZombieHorde()
 {
-	delete[] this->Zombies;
-	std::cout	<< std::endl	<< "\tHORDE OF " \
-								<< BOLD_RED << this->NumOfZombies << NO_COLOR \
-								<< " ZOMBIES " \
-								<< BOLD_RED << "DESTROYED" << NO_COLOR \
-								<< "!!!" << std::endl << std::endl;
+	delete[] _zombies;
+	std::cout << std::endl << "\tHORDE OF " BOLD_RED << _numOfZombies << NO_COLOR \
+								" ZOMBIES " BOLD_RED << "DESTROYED" << NO_COLOR "!!!" \
+									<< std::endl << std::endl;
 }

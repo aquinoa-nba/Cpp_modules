@@ -2,54 +2,45 @@
 
 Pony::Pony()
 {
-	std::cout	<< "Pony was " \
-				<< GREEN << "born" << NO_COLOR \
-				<< std::endl;
+	std::cout	<< "Pony was " GREEN "born" NO_COLOR << std::endl;
 }
 
-void	Pony::SetName(std::string str)
+void	Pony::setName(std::string name)
 {
-	name = str;
+	_name = name;
 }
 
-void	Pony::SetColor(std::string str)
+void	Pony::setColor(std::string color)
 {
-	color = str;
+	_color = color;
 }
 
-void	Pony::SetFavoriteMeal(std::string str)
+void	Pony::setFavoriteMeal(std::string favoriteMeal)
 {
-	favorite_meal = str;
+	_favoriteMeal = favoriteMeal;
 }
 
-std::string	Pony::GetName()
+std::string	Pony::getName()
 {
-	return (name);
+	return (_name);
 }
 
-std::string	Pony::GetColor()
+std::string	Pony::getColor()
 {
-	return (color);
+	return (_color);
 }
 
-std::string	Pony::GetFavoriteMeal()
+std::string	Pony::getFavoriteMeal()
 {
-	return (favorite_meal);
+	return (_favoriteMeal);
 }
 
 void	Pony::eat()
 {
-	std::cout	<< "Pony " \
-				<< name \
-				<< YELLOW << " eating " << NO_COLOR \
-				<< favorite_meal \
-				<< std::endl;
+	std::cout	<< "Pony " << _name << YELLOW " eating " NO_COLOR << _favoriteMeal << std::endl;
 }
 
 Pony::~Pony()
 {
-	std::cout	<< "Pony " \
-				<< name \
-				<< RED << " died" << NO_COLOR \
-				<< std::endl;
+	std::cout	<< "Pony " << _name << RED " died" NO_COLOR << std::endl;
 }

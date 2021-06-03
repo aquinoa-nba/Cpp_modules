@@ -2,24 +2,24 @@
 
 void	ponyOnTheStack()
 {
-	Pony	first_pony;
+	Pony	pony;
 
-	first_pony.SetName("Adam");
-	first_pony.SetColor("Black");
-	first_pony.SetFavoriteMeal("Carrot");
-	first_pony.eat();
+	pony.setName("Adam");
+	pony.setColor("Black");
+	pony.setFavoriteMeal("Carrot");
+	pony.eat();
 }
 
 void	ponyOnTheHeap()
 {
-	Pony*	second_pony;
+	Pony*	pony;
 
-	second_pony = new Pony();
-	second_pony->SetName("Eva");
-	second_pony->SetColor("White");
-	second_pony->SetFavoriteMeal("Sugar");
-	second_pony->eat();
-	delete second_pony;
+	pony = new Pony();
+	pony->setName("Eva");
+	pony->setColor("White");
+	pony->setFavoriteMeal("Sugar");
+	pony->eat();
+	delete pony;
 }
 
 int		main()

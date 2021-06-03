@@ -13,20 +13,16 @@
 
 class Zombie
 {
-
-private:
-
-	std::string	name;
-	std::string	type;
-
-public:
-
-	void		SetName(std::string name);
-	void		SetType(std::string type);
-	std::string	GetName();
-	std::string	GetType();
-	void		announce();
-				~Zombie();
+	private:
+		std::string	_name;
+		std::string	_type;
+	public:
+		void		setName(std::string name);
+		void		setType(std::string type);
+		std::string	getName();
+		std::string	getType();
+		void		announce();
+		~Zombie();
 };
 
 std::string	randomZombieName();

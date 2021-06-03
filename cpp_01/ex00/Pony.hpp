@@ -10,21 +10,20 @@
 
 class	Pony
 {
-private:
-	std::string	name;
-	std::string	color;
-	std::string	favorite_meal;
-
-public:
-				Pony();
-	void		SetName(std::string str);
-	void		SetColor(std::string str);
-	void		SetFavoriteMeal(std::string str);
-	std::string	GetName();
-	std::string	GetColor();
-	std::string	GetFavoriteMeal();
-	void		eat();
-				~Pony();
+	private:
+		std::string	_name;
+		std::string	_color;
+		std::string	_favoriteMeal;
+	public:
+		void		setName(std::string name);
+		void		setColor(std::string color);
+		void		setFavoriteMeal(std::string favoriteMeal);
+		std::string	getName();
+		std::string	getColor();
+		std::string	getFavoriteMeal();
+		void		eat();
+		Pony();
+		~Pony();
 };
 
 #endif

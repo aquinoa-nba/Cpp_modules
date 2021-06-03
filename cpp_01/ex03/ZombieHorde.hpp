@@ -5,18 +5,13 @@
 
 class ZombieHorde
 {
-
-private:
-
-	int		NumOfZombies;
-	Zombie	*Zombies;
-
-public:
-
-			ZombieHorde(int	N);
-	void	announce();
-			~ZombieHorde();
-
+	private:
+		int		_numOfZombies;
+		Zombie	*_zombies;
+	public:
+		void	announce();
+				ZombieHorde(int	numOfZombie);
+				~ZombieHorde();
 };
 
 #endif

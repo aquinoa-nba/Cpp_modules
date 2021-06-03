@@ -1,35 +1,32 @@
 #include "Zombie.hpp"
 
-void	Zombie::SetName(std::string name)
+void	Zombie::setName(std::string name)
 {
-	this->name = name;
+	_name = name;
 }
 
-void	Zombie::SetType(std::string type)
+void	Zombie::setType(std::string type)
 {
-	this->type = type;
+	_type = type;
 }
 
-std::string	Zombie::GetName()
+std::string	Zombie::getName()
 {
-	return (this->name);
+	return (_name);
 }
 
-std::string	Zombie::GetType()
+std::string	Zombie::getType()
 {
-	return (this->type);
+	return (_type);
 }
 
 void	Zombie::announce()
 {
-	std::cout 	<< "<" << GREEN << this->name << NO_COLOR \
-				<< " (" << this->type << ")" << ">" \
-				<< PURPLE << "\tBraiiiiiiinnnssss..." << NO_COLOR << std::endl;
+	std::cout 	<< "<" GREEN << _name << NO_COLOR " (" << _type << ")>" \
+					PURPLE "\tBraiiiiiiinnnssss..." NO_COLOR << std::endl;
 }
 
 Zombie::~Zombie()
 {
-	std::cout 	<< "Zombie\t" \
-				<< GREEN << this->name << NO_COLOR \
-				<< "\tdestroyed!" << std::endl;
+	std::cout 	<< "Zombie\t" GREEN << _name << NO_COLOR "\tdestroyed!" << std::endl;
 }
