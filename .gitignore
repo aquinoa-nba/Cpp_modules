@@ -1,5 +1,7 @@
 .vscode/
 cpp*/ex*/.obj/
+cpp*/ex*/a.out
+cpp*/ex*/.DS_STORE
 cpp*/.DS_STORE
 cpp_00/ex00/megaphone
 cpp_00/ex01/phonebook
