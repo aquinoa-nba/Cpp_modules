@@ -3,7 +3,8 @@
 std::string	randomZombieName()
 {
 	const int	size = 6;
-	std::string name[size] = {"Aquinoa", "Keuclide", "Walethea", "Mhumfrey", "Mismene", "Aemustaf"};
+	std::string name[size] = {	"Aquinoa", "Keuclide", "Walethea", \
+								"Mhumfrey", "Mismene", "Aemustaf" };
 
 	srand(time(NULL));
 	return (name[rand() % size]);
@@ -12,7 +13,8 @@ std::string	randomZombieName()
 std::string	randomZombieType()
 {
 	const int	size = 6;
-	std::string type[size] = {"Runner", "Stalker", "Clicker", "Bloater", "Shambler", "Rat King"};
+	std::string type[size] = {	"Runner", "Stalker", "Clicker", \
+								"Bloater", "Shambler", "Rat King" };
 
 	srand(time(NULL));
 	return (type[rand() % size]);
@@ -22,12 +24,13 @@ std::string	chosenType()
 {
 	std::string	answer;
 
-	std::cout << std::endl << "Choose the type of zombie (" << PURPLE << "1." << NO_COLOR << "Runner, " \
-															<< PURPLE << "2." << NO_COLOR << "Stalker, " \
-															<< PURPLE << "3." << NO_COLOR << "Clicker, " \
-															<< PURPLE << "4." << NO_COLOR << "Bloater, " \
-															<< PURPLE << "5." << NO_COLOR << "Shambler, " \
-															<< PURPLE << "6." << NO_COLOR << "Rat King) --> ";
+	std::cout << std::endl	<< "Choose the type of zombie (" \
+							<< PURPLE << "1." << NO_COLOR << "Runner, " \
+							<< PURPLE << "2." << NO_COLOR << "Stalker, " \
+							<< PURPLE << "3." << NO_COLOR << "Clicker, " \
+							<< PURPLE << "4." << NO_COLOR << "Bloater, " \
+							<< PURPLE << "5." << NO_COLOR << "Shambler, " \
+							<< PURPLE << "6." << NO_COLOR << "Rat King) --> ";
 	if (!std::getline(std::cin, answer))
 		exit(1);
 	if (answer.compare("1") == 0)
@@ -53,7 +56,8 @@ int	createZombie(ZombieEvent& zombieEvent)
 {
 	std::string	answer;
 
-	std::cout << "Do you want to create your own zombie? " << BOLD_GREEN << "Y" << NO_COLOR << "/" << BOLD_RED << "N" << NO_COLOR << " --> ";
+	std::cout	<< "Do you want to create your own zombie? " \
+				<< BOLD_GREEN << "Y" << NO_COLOR << "/" << BOLD_RED << "N" << NO_COLOR << " --> ";
 	if (!std::getline(std::cin, answer))
 		exit(1);
 	if (answer.compare("Y") == 0 || answer.compare("y") == 0)
@@ -62,9 +66,9 @@ int	createZombie(ZombieEvent& zombieEvent)
 		return (YES);
 	}
 	else if (answer.compare("N") == 0 || answer.compare("n") == 0)
-	{
 		zombieEvent.randomChump();
-	}
+	else
+		return (createZombie(zombieEvent));
 	return (NO);
 }
 

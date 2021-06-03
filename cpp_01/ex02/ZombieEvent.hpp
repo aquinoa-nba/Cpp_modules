@@ -2,8 +2,6 @@
 # define ZOMBIE_EVENT_HPP
 
 #include "Zombie.hpp"
-#include <ctime>
-#include <unistd.h>
 
 class	ZombieEvent
 {
