@@ -20,14 +20,14 @@ FragTrap::~FragTrap()
 
 void	FragTrap::rangedAttack(std::string const & target)
 {
-	std::cout << "FR4G-TP " B_YELLOW << _name << NO_COLOR " attacks " B_PURPLE << target \
+	std::cout << B_YELLOW << _name << NO_COLOR " attacks " B_PURPLE << target \
 				<< NO_COLOR " at range, causing " B_RED << _rangedAttackDamage \
 				<< NO_COLOR " points of damage!" << std::endl;
 }
 
 void	FragTrap::meleeAttack(std::string const & target)
 {
-	std::cout << "FR4G-TP " B_YELLOW << _name << NO_COLOR " attacks " B_PURPLE << target \
+	std::cout << B_YELLOW << _name << NO_COLOR " attacks " B_PURPLE << target \
 				<< NO_COLOR " at mellee, causing " B_RED << _meleeAttackDamage \
 				<< NO_COLOR " points of damage!" << std::endl;
 }
@@ -49,7 +49,7 @@ void	FragTrap::takeDamage(unsigned int amount)
 	}
 	else
 		amount = 0;
-	std::cout << "FR4G-TP " B_YELLOW << _name << NO_COLOR " take " B_RED << amount \
+	std::cout << B_YELLOW << _name << NO_COLOR " take " B_RED << amount \
 				<< NO_COLOR " point of damage!" << std::endl;
 }
 
@@ -64,7 +64,7 @@ void	FragTrap::beRepaired(unsigned int amount)
 	{
 		_hitPoints += amount;
 	}
-	std::cout << "FR4G-TP " B_YELLOW << _name << NO_COLOR " repaired " B_GREEN << amount \
+	std::cout << B_YELLOW << _name << NO_COLOR " repaired " B_GREEN << amount \
 				<< NO_COLOR " hit points!" << std::endl;
 }
 
@@ -75,7 +75,7 @@ bool	FragTrap::vaulthunterDotExe(std::string const & target)
 	if (_energyPoints >= 25)
 	{
 		srand(time(NULL));
-		std::cout << "FR4G-TP " B_YELLOW << _name << NO_COLOR " attacks " B_PURPLE << target \
+		std::cout << std::endl << B_YELLOW << _name << NO_COLOR " attacks " B_PURPLE << target \
 				<< NO_COLOR " with a " B_BLUE << attackArr[rand() % 5] << NO_COLOR << std::endl;
 		_energyPoints -= 25;
 		sleep(1);
@@ -83,7 +83,7 @@ bool	FragTrap::vaulthunterDotExe(std::string const & target)
 	}
 	else
 	{
-		std::cout << B_YELLOW << _name << NO_COLOR ": Not enought energy..." << std::endl;
+		std::cout << std::endl << B_YELLOW << _name << NO_COLOR " : Not enought energy..." << std::endl << std::endl;
 		return false;
 	}
 }
