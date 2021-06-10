@@ -1,8 +1,9 @@
 #include "FragTrap.hpp"
 
-FragTrap::FragTrap(std::string const &name)
-	: ClapTrap(name)
+FragTrap::FragTrap(std::string const &name) : ClapTrap(name)
 {
+	_hitPoints = 100;
+	_maxHitPoints = 100;
 	_energyPoints = 100;
 	_maxEnergyPoints = 100;
 	_meleeAttackDamage = 30;

@@ -1,8 +1,9 @@
 #include "ScavTrap.hpp"
 
-ScavTrap::ScavTrap(std::string const &name)
-	: ClapTrap(name)
+ScavTrap::ScavTrap(std::string const &name) : ClapTrap(name)
 {
+	_hitPoints = 100;
+	_maxHitPoints = 100;
 	_energyPoints = 50;
 	_maxEnergyPoints = 50;
 	_meleeAttackDamage = 20;

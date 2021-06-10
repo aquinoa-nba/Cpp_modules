@@ -1,6 +1,8 @@
 #include "ClapTrap.hpp"
 
-ClapTrap::ClapTrap(std::string const &name) : _hitPoints(100), _maxHitPoints(100), _level(1), _name(name)
+ClapTrap::ClapTrap(std::string const &name) : _hitPoints(0), _maxHitPoints(0), \
+	_energyPoints(0), _maxEnergyPoints(0), _level(1), _name(name), \
+	_meleeAttackDamage(0), _rangedAttackDamage(0), _armorDamageReduction(0)
 {
 	std::cout << "CL4P-TP " << _name <<  B_WHITE " created" NO_COLOR << std::endl;
 }
