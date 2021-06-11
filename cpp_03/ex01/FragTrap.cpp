@@ -4,30 +4,30 @@ FragTrap::FragTrap(std::string const &name) : _hitPoints(100), _maxHitPoints(100
 	_energyPoints(100), _maxEnergyPoints(100), _level(1), _name(name), \
 	_meleeAttackDamage(30), _rangedAttackDamage(20), _armorDamageReduction(5)
 {
-	std::cout << _name <<  B_WHITE " created" NO_COLOR << std::endl;
+	std::cout << "FR4G-TP " << _name <<  B_WHITE " created" NO_COLOR << std::endl;
 }
 
 FragTrap::FragTrap(FragTrap const &other)
 {
-	std::cout << B_WHITE "Copy constructor called" NO_COLOR << std::endl;
+	std::cout << B_WHITE "Copy constructor for FR4G-TP called" NO_COLOR << std::endl;
 	*this = other;
 }
 
 FragTrap::~FragTrap()
 {
-	std::cout << _name << B_WHITE " destroyed" NO_COLOR << std::endl;
+	std::cout << "FR4G-TP " << _name << B_WHITE " destroyed" NO_COLOR << std::endl;
 }
 
 void	FragTrap::rangedAttack(std::string const & target)
 {
-	std::cout << B_YELLOW << _name << NO_COLOR " attacks " B_PURPLE << target \
+	std::cout << "FR4G-TP " B_YELLOW << _name << NO_COLOR " attacks " B_PURPLE << target \
 				<< NO_COLOR " at range, causing " B_RED << _rangedAttackDamage \
 				<< NO_COLOR " points of damage!" << std::endl;
 }
 
 void	FragTrap::meleeAttack(std::string const & target)
 {
-	std::cout << B_YELLOW << _name << NO_COLOR " attacks " B_PURPLE << target \
+	std::cout << "FR4G-TP " B_YELLOW << _name << NO_COLOR " attacks " B_PURPLE << target \
 				<< NO_COLOR " at mellee, causing " B_RED << _meleeAttackDamage \
 				<< NO_COLOR " points of damage!" << std::endl;
 }
@@ -75,7 +75,7 @@ bool	FragTrap::vaulthunterDotExe(std::string const & target)
 	if (_energyPoints >= 25)
 	{
 		srand(time(NULL));
-		std::cout << std::endl << B_YELLOW << _name << NO_COLOR " attacks " B_PURPLE << target \
+		std::cout << "FR4G-TP " B_YELLOW << _name << NO_COLOR " attacks " B_PURPLE << target \
 				<< NO_COLOR " with a " B_BLUE << attackArr[rand() % 5] << NO_COLOR << std::endl;
 		_energyPoints -= 25;
 		sleep(1);
@@ -83,7 +83,7 @@ bool	FragTrap::vaulthunterDotExe(std::string const & target)
 	}
 	else
 	{
-		std::cout << std::endl << B_YELLOW << _name << NO_COLOR " : Not enought energy..." << std::endl << std::endl;
+		std::cout << "FR4G-TP " B_YELLOW << _name << NO_COLOR " : Not enought energy..." << std::endl;
 		return false;
 	}
 }
@@ -104,7 +104,7 @@ unsigned int FragTrap::getRangedAttackDamage(void)
 
 FragTrap& FragTrap::operator = (FragTrap const &other)
 {
-	std::cout << "Assignation operator called" << std::endl;
+	std::cout << "Assignation operator for FR4G-TP called" << std::endl;
 	if (this != &other)
 	{
 		_hitPoints = other._hitPoints;

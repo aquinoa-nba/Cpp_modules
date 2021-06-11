@@ -4,30 +4,30 @@ ScavTrap::ScavTrap(std::string const &name) : _hitPoints(100), _maxHitPoints(100
 	_energyPoints(50), _maxEnergyPoints(50), _level(1), _name(name), \
 	_meleeAttackDamage(20), _rangedAttackDamage(10), _armorDamageReduction(3)
 {
-	std::cout << _name <<  B_WHITE " created" NO_COLOR << std::endl;
+	std::cout << "SC4V-TP " << _name <<  B_WHITE " created" NO_COLOR << std::endl;
 }
 
 ScavTrap::ScavTrap(ScavTrap const &other)
 {
-	std::cout << B_WHITE "Copy constructor called" NO_COLOR << std::endl;
+	std::cout << B_WHITE "Copy constructor for SC4V-TP called" NO_COLOR << std::endl;
 	*this = other;
 }
 
 ScavTrap::~ScavTrap()
 {
-	std::cout << _name << B_WHITE " destroyed" NO_COLOR << std::endl;
+	std::cout << "SC4V-TP " << _name << B_WHITE " destroyed" NO_COLOR << std::endl;
 }
 
 void	ScavTrap::rangedAttack(std::string const & target)
 {
-	std::cout << "FR4G-TP " B_YELLOW << _name << NO_COLOR " attacks " B_PURPLE << target \
+	std::cout << "SC4V-TP " B_YELLOW << _name << NO_COLOR " attacks " B_PURPLE << target \
 				<< NO_COLOR " at range, causing " B_RED << _rangedAttackDamage \
 				<< NO_COLOR " points of damage!" << std::endl;
 }
 
 void	ScavTrap::meleeAttack(std::string const & target)
 {
-	std::cout << "FR4G-TP " B_YELLOW << _name << NO_COLOR " attacks " B_PURPLE << target \
+	std::cout << "SC4V-TP " B_YELLOW << _name << NO_COLOR " attacks " B_PURPLE << target \
 				<< NO_COLOR " at mellee, causing " B_RED << _meleeAttackDamage \
 				<< NO_COLOR " points of damage!" << std::endl;
 }
@@ -49,7 +49,7 @@ void	ScavTrap::takeDamage(unsigned int amount)
 	}
 	else
 		amount = 0;
-	std::cout << "FR4G-TP " B_YELLOW << _name << NO_COLOR " take " B_RED << amount \
+	std::cout << B_YELLOW << _name << NO_COLOR " take " B_RED << amount \
 				<< NO_COLOR " point of damage!" << std::endl;
 }
 
@@ -64,7 +64,7 @@ void	ScavTrap::beRepaired(unsigned int amount)
 	{
 		_hitPoints += amount;
 	}
-	std::cout << "FR4G-TP " B_YELLOW << _name << NO_COLOR " repaired " B_GREEN << amount \
+	std::cout << B_YELLOW << _name << NO_COLOR " repaired " B_GREEN << amount \
 				<< NO_COLOR " hit points!" << std::endl;
 }
 
@@ -76,14 +76,14 @@ bool	ScavTrap::challengeNewcomer(void)
 	if (_energyPoints >= 15)
 	{
 		srand(time(NULL));
-		std::cout << B_YELLOW << _name << NO_COLOR " : " B_BLUE << actionArr[rand() % 5] << NO_COLOR << std::endl;
+		std::cout << "SC4V-TP " B_YELLOW << _name << NO_COLOR " : " B_BLUE << actionArr[rand() % 5] << NO_COLOR << std::endl;
 		_energyPoints -= 15;
 		sleep(1);
 		return true;
 	}
 	else
 	{
-		std::cout << B_YELLOW << _name << NO_COLOR " : Not enought energy..." << std::endl << std::endl;
+		std::cout << "SC4V-TP " B_YELLOW << _name << NO_COLOR " : Not enought energy..." << std::endl;
 		return false;
 	}
 }
@@ -104,7 +104,7 @@ unsigned int ScavTrap::getRangedAttackDamage(void)
 
 ScavTrap& ScavTrap::operator = (ScavTrap const &other)
 {
-	std::cout << "Assignation operator called" << std::endl;
+	std::cout << "Assignation operator for SC4V-TP called" << std::endl;
 	if (this != &other)
 	{
 		_hitPoints = other._hitPoints;

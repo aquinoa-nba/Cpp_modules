@@ -1,12 +1,12 @@
-#ifndef FRAG_TRAP_HPP
-# define FRAG_TRAP_HPP
+#ifndef CLAP_TRAP_HPP
+# define CLAP_TRAP_HPP
 
 # include <iostream>
 # include <unistd.h>
 
-class FragTrap
+class ClapTrap
 {
-	private:
+	protected:
 		int				_hitPoints;
 		unsigned int	_maxHitPoints;
 		int				_energyPoints;
@@ -17,18 +17,17 @@ class FragTrap
 		unsigned int	_rangedAttackDamage;
 		unsigned int	_armorDamageReduction;
 	public:
-		FragTrap(std::string const &name);
-		FragTrap(FragTrap const &other);
-		~FragTrap(void);
+		ClapTrap(std::string const &name);
+		ClapTrap(ClapTrap const &other);
+		~ClapTrap(void);
 		void			rangedAttack(std::string const & target);
 		void			meleeAttack(std::string const & target);
 		void			takeDamage(unsigned int amount);
 		void			beRepaired(unsigned int amount);
-		bool			vaulthunterDotExe(std::string const & target);
 		std::string		getName(void);
 		unsigned int	getMeleeAttackDamage(void);
 		unsigned int	getRangedAttackDamage(void);
-		FragTrap& operator = (FragTrap const &other);
+		ClapTrap& operator = (ClapTrap const &other);
 };
 
 # define	NO_COLOR	"\033[0m"

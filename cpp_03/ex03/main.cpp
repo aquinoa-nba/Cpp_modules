@@ -1,6 +1,7 @@
 #include "ClapTrap.hpp"
 #include "FragTrap.hpp"
 #include "ScavTrap.hpp"
+#include "NinjaTrap.hpp"
 
 int		main()
 {
@@ -9,6 +10,8 @@ int		main()
 	FragTrap firstRobo("Bender Rodriguez");
 	FragTrap secondRobo("WALL-E");
 	ScavTrap thirdRobo("KVN");
+	NinjaTrap fourthRobo("Chappie");
+	ClapTrap fifthRobo("Clockwerk");
 
 	std::cout << std::endl << PURPLE "\t\t\t<< ex00 >>" NO_COLOR << std::endl << std::endl;
 
@@ -43,6 +46,16 @@ int		main()
 	{
 		std::cout << std::endl;
 	}
+
+	std::cout << std::endl << PURPLE "\t\t\t<< ex03 >>" NO_COLOR << std::endl << std::endl;
+
+	fourthRobo.meleeAttack(secondRobo.getName());
+	fourthRobo.rangedAttack(secondRobo.getName());
+	fourthRobo.ninjaShoebox(firstRobo);
+	fourthRobo.ninjaShoebox(thirdRobo);
+	fourthRobo.ninjaShoebox(fourthRobo);
+	fourthRobo.ninjaShoebox(fifthRobo);
+	fourthRobo.ninjaShoebox(secondRobo);
 
 	std::cout << std::endl << PURPLE "\t\t\t<< DESTRUCTORS >>" NO_COLOR << std::endl << std::endl;
 }

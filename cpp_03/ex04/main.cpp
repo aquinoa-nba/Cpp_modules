@@ -1,14 +1,19 @@
 #include "ClapTrap.hpp"
 #include "FragTrap.hpp"
 #include "ScavTrap.hpp"
+#include "NinjaTrap.hpp"
+#include "SuperTrap.hpp"
 
 int		main()
 {
 	std::cout << std::endl << PURPLE "\t\t\t<< CONSTRUCTORS >>" NO_COLOR << std::endl;
 
-	FragTrap firstRobo("Bender Rodriguez");
-	FragTrap secondRobo("WALL-E");
-	ScavTrap thirdRobo("KVN");
+	FragTrap	firstRobo("Bender Rodriguez");
+	FragTrap	secondRobo("WALL-E");
+	ScavTrap	thirdRobo("KVN");
+	NinjaTrap	fourthRobo("Chappie");
+	ClapTrap	fifthRobo("Clockwerk");
+	SuperTrap	sixthRobo("Bumblebee");
 
 	std::cout << std::endl << PURPLE "\t\t\t<< ex00 >>" NO_COLOR << std::endl << std::endl;
 
@@ -37,12 +42,30 @@ int		main()
 
 	std::cout << std::endl << PURPLE "\t\t\t<< ex01 >>" NO_COLOR << std::endl << std::endl;
 
-	thirdRobo.meleeAttack(secondRobo.getName());
-	thirdRobo.rangedAttack(secondRobo.getName());
 	while (thirdRobo.challengeNewcomer())
 	{
 		std::cout << std::endl;
 	}
+
+	std::cout << std::endl << PURPLE "\t\t\t<< ex03 >>" NO_COLOR << std::endl << std::endl;
+
+	fourthRobo.meleeAttack(secondRobo.getName());
+	fourthRobo.rangedAttack(secondRobo.getName());
+	fourthRobo.ninjaShoebox(firstRobo);
+	fourthRobo.ninjaShoebox(thirdRobo);
+	fourthRobo.ninjaShoebox(fourthRobo);
+	fourthRobo.ninjaShoebox(fifthRobo);
+	fourthRobo.ninjaShoebox(secondRobo);
+
+	std::cout << std::endl << PURPLE "\t\t\t<< ex04 >>" NO_COLOR << std::endl << std::endl;
+
+	sixthRobo.vaulthunterDotExe(firstRobo.getName());
+	sixthRobo.ninjaShoebox(secondRobo);
+
+	sixthRobo.rangedAttack(thirdRobo.getName());
+	sixthRobo.meleeAttack(fourthRobo.getName());
+
+	std::cout << std::endl;
 
 	std::cout << std::endl << PURPLE "\t\t\t<< DESTRUCTORS >>" NO_COLOR << std::endl << std::endl;
 }

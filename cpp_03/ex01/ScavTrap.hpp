@@ -6,15 +6,15 @@
 class  ScavTrap
 {
 	private:
-		int				_hitPoints; // (100)
-		unsigned int	_maxHitPoints; // (100)
-		int				_energyPoints; // (50)
-		unsigned int	_maxEnergyPoints; // (50)
-		int				_level; // (1)
-		std::string		_name; // (Parameter of constructor)
-		unsigned int	_meleeAttackDamage; // (20)
-		unsigned int	_rangedAttackDamage; // (15)
-		unsigned int	_armorDamageReduction; // (3)
+		int				_hitPoints;
+		unsigned int	_maxHitPoints;
+		int				_energyPoints;
+		unsigned int	_maxEnergyPoints;
+		int				_level;
+		std::string		_name;
+		unsigned int	_meleeAttackDamage;
+		unsigned int	_rangedAttackDamage;
+		unsigned int	_armorDamageReduction;
 	public:
 		ScavTrap(std::string const &name);
 		ScavTrap(ScavTrap const &other);
