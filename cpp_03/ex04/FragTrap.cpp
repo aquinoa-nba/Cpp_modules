@@ -1,6 +1,6 @@
 #include "FragTrap.hpp"
 
-FragTrap::FragTrap()
+FragTrap::FragTrap(void)
 {
 	_hitPoints = 100;
 	_maxHitPoints = 100;
@@ -29,7 +29,7 @@ FragTrap::FragTrap(FragTrap const &other) : ClapTrap(other._name)
 	*this = other;
 }
 
-FragTrap::~FragTrap()
+FragTrap::~FragTrap(void)
 {
 	std::cout << "FR4G-TP " << _name << B_WHITE " destroyed" NO_COLOR << std::endl;
 }

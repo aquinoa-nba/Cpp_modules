@@ -15,6 +15,7 @@ class  ScavTrap
 		unsigned int	_meleeAttackDamage;
 		unsigned int	_rangedAttackDamage;
 		unsigned int	_armorDamageReduction;
+		ScavTrap(void);
 	public:
 		ScavTrap(std::string const &name);
 		ScavTrap(ScavTrap const &other);
@@ -27,7 +28,7 @@ class  ScavTrap
 		std::string		getName(void);
 		unsigned int	getMeleeAttackDamage(void);
 		unsigned int	getRangedAttackDamage(void);
-		ScavTrap& operator = (ScavTrap const &other);
+		ScavTrap& 		operator = (ScavTrap const &other);
 };
 
 #endif

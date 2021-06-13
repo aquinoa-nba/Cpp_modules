@@ -1,6 +1,10 @@
 #include "SuperTrap.hpp"
 #include "FragTrap.hpp"
 
+SuperTrap::SuperTrap(void)
+{
+}
+
 SuperTrap::SuperTrap(std::string const &name) : ClapTrap(name), FragTrap(), NinjaTrap()
 {
 	std::cout << "SUP3R-TP " << _name <<  B_WHITE " created" NO_COLOR << std::endl;
@@ -12,7 +16,7 @@ SuperTrap::SuperTrap(SuperTrap const &other)
 	*this = other;
 }
 
-SuperTrap::~SuperTrap()
+SuperTrap::~SuperTrap(void)
 {
 	std::cout << "SUP3R-TP " << _name << B_WHITE " destroyed" NO_COLOR << std::endl;
 }

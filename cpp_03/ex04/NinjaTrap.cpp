@@ -1,6 +1,6 @@
 #include "NinjaTrap.hpp"
 
-NinjaTrap::NinjaTrap()
+NinjaTrap::NinjaTrap(void)
 {
 	_energyPoints = 120;
 	_maxEnergyPoints = 120;

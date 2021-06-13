@@ -5,10 +5,12 @@
 
 class  ScavTrap : public ClapTrap
 {
+	private:
+		ScavTrap(void);
 	public:
 		ScavTrap(std::string const &name);
 		ScavTrap(ScavTrap const &other);
-		~ScavTrap();
+		~ScavTrap(void);
 		void	rangedAttack(std::string const & target);
 		void	meleeAttack(std::string const & target);
 		bool	challengeNewcomer(void);

@@ -6,6 +6,8 @@
 
 class ClapTrap
 {
+	private:
+		ClapTrap(void);
 	protected:
 		int				_hitPoints;
 		unsigned int	_maxHitPoints;
@@ -27,7 +29,7 @@ class ClapTrap
 		std::string		getName(void);
 		unsigned int	getMeleeAttackDamage(void);
 		unsigned int	getRangedAttackDamage(void);
-		ClapTrap& operator = (ClapTrap const &other);
+		ClapTrap&		operator = (ClapTrap const &other);
 };
 
 # define	NO_COLOR	"\033[0m"

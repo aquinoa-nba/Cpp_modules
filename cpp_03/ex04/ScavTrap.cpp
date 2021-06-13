@@ -1,5 +1,9 @@
 #include "ScavTrap.hpp"
 
+ScavTrap::ScavTrap(void)
+{
+}
+
 ScavTrap::ScavTrap(std::string const &name) : ClapTrap(name)
 {
 	_hitPoints = 100;
@@ -19,7 +23,7 @@ ScavTrap::ScavTrap(ScavTrap const &other) : ClapTrap(other._name)
 	*this = other;
 }
 
-ScavTrap::~ScavTrap()
+ScavTrap::~ScavTrap(void)
 {
 	std::cout << "SC4V-TP " << _name << B_WHITE " destroyed" NO_COLOR << std::endl;
 }

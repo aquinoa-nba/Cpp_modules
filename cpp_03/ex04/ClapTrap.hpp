@@ -16,8 +16,8 @@ class ClapTrap
 		unsigned int	_meleeAttackDamage;
 		unsigned int	_rangedAttackDamage;
 		unsigned int	_armorDamageReduction;
+		ClapTrap(void);
 	public:
-		ClapTrap();
 		ClapTrap(std::string const &name);
 		ClapTrap(ClapTrap const &other);
 		~ClapTrap(void);
@@ -28,7 +28,7 @@ class ClapTrap
 		std::string		getName(void);
 		unsigned int	getMeleeAttackDamage(void);
 		unsigned int	getRangedAttackDamage(void);
-		ClapTrap& operator = (ClapTrap const &other);
+		ClapTrap& 		operator = (ClapTrap const &other);
 };
 
 # define	NO_COLOR	"\033[0m"

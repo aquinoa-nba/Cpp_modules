@@ -1,6 +1,6 @@
 #include "ClapTrap.hpp"
 
-ClapTrap::ClapTrap()
+ClapTrap::ClapTrap(void)
 {
 }
 
@@ -17,7 +17,7 @@ ClapTrap::ClapTrap(ClapTrap const &other)
 	*this = other;
 }
 
-ClapTrap::~ClapTrap()
+ClapTrap::~ClapTrap(void)
 {
 	std::cout << "CL4P-TP " << _name << B_WHITE " destroyed" NO_COLOR << std::endl << std::endl;
 }

@@ -1,4 +1,6 @@
 .vscode/
+a.out.dSYM/
+cpp*/ex*/a.out.dSYM/
 cpp*/ex*/.obj/
 cpp*/ex*/a.out
 cpp*/ex*/.DS_STORE

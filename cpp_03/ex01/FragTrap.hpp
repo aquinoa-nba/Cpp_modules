@@ -16,6 +16,7 @@ class FragTrap
 		unsigned int	_meleeAttackDamage;
 		unsigned int	_rangedAttackDamage;
 		unsigned int	_armorDamageReduction;
+		FragTrap(void);
 	public:
 		FragTrap(std::string const &name);
 		FragTrap(FragTrap const &other);
@@ -28,7 +29,7 @@ class FragTrap
 		std::string		getName(void);
 		unsigned int	getMeleeAttackDamage(void);
 		unsigned int	getRangedAttackDamage(void);
-		FragTrap& operator = (FragTrap const &other);
+		FragTrap&		operator = (FragTrap const &other);
 };
 
 # define	NO_COLOR	"\033[0m"
