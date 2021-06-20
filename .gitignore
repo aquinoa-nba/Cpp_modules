@@ -3,8 +3,8 @@ a.out.dSYM/
 cpp*/ex*/a.out.dSYM/
 cpp*/ex*/.obj/
 cpp*/ex*/a.out
-cpp*/ex*/.DS_STORE
-cpp*/.DS_STORE
+cpp*/ex*/.DS_Store
+cpp*/.DS_Store
 cpp_00/ex00/megaphone
 cpp_00/ex01/phonebook
-.DS_STORE
+.DS_Store

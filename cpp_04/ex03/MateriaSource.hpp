@@ -9,9 +9,11 @@ class MateriaSource : public IMateriaSource
 		AMateria	*_materia[4];
 	public:
 		MateriaSource();
+		MateriaSource(MateriaSource const &);
 		~MateriaSource();
 		void		learnMateria(AMateria *materia);
 		AMateria*	createMateria(std::string const &type);
+		MateriaSource&	operator = (MateriaSource const &);
 };
 
 #endif

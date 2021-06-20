@@ -2,6 +2,7 @@
 #include "Character.hpp"
 #include "Ice.hpp"
 #include "Cure.hpp"
+#include "Fire.hpp"
 
 int main()
 {
@@ -9,24 +10,28 @@ int main()
 
 	src->learnMateria(new Ice());
 	src->learnMateria(new Cure());
+	src->learnMateria(new Fire());
 
-	ICharacter* me = new Character("me");
+	Character* bob = new Character("bob");
 	AMateria* tmp;
 
 	tmp = src->createMateria("ice");
-	me->equip(tmp);
+	bob->equip(tmp);
 	tmp = src->createMateria("cure");
-	me->equip(tmp);
+	bob->equip(tmp);
+	tmp = src->createMateria("fire");
+	bob->equip(tmp);
 
-	ICharacter* bob = new Character("bob");
+	Character* me = new Character("me");
+
+	*me = *bob;
 
 	me->use(0, *bob);
 	me->use(1, *bob);
+	me->use(2, *bob);
+
 	delete bob;
 	delete me;
 	delete src;
 	return 0;
 }
-
-// * shoots an ice bolt at bob *$
-// * heals bob's wounds *$

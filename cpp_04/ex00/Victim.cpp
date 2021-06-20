@@ -5,20 +5,14 @@ Victim::Victim(std::string const &name) : _name(name)
 	std::cout << "Some random victim called " << _name << " just appeared!" << std::endl;
 }
 
-Victim::Victim(Victim const &other)
-{
-	*this = other;
-}
+Victim::Victim(Victim const &other) { *this = other; }
 
 Victim::~Victim(void)
 {
 	std::cout << "Victim " << _name << " just died for no apparent reason!" << std::endl;
 }
 
-std::string	Victim::getName(void) const
-{
-	return _name;
-}
+std::string	Victim::getName(void) const { return _name; }
 
 void Victim::getPolymorphed(void) const
 {

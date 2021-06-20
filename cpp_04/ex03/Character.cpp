@@ -50,7 +50,9 @@ Character&	Character::operator = (Character const &other)
 		for (int i = 0; i < 4; i++)
 		{
 			delete _materia[i];
-			_materia[i] = other._materia[i]->clone();
+			_materia[i] = nullptr;
+			if (other._materia[i] != nullptr)
+				_materia[i] = other._materia[i]->clone();
 		}
 	}
 	return *this;

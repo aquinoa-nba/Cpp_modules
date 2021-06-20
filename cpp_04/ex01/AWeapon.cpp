@@ -6,30 +6,18 @@ AWeapon::AWeapon(std::string const & name, int apcost, int damage)
 	std::cout << NO_COLOR "Constructor for Weapon called" << std::endl;
 }
 
-AWeapon::AWeapon(AWeapon const &other)
-{
-	*this = other;
-}
+AWeapon::AWeapon(AWeapon const &other) { *this = other; }
 
 AWeapon::~AWeapon(void)
 {
 	std::cout << NO_COLOR "Destructor for Weapon called" << std::endl;
 }
 
-std::string	AWeapon::getName(void) const
-{
-	return _name;
-}
+std::string	AWeapon::getName(void) const { return _name; }
 
-int	AWeapon::getDamage(void) const
-{
-	return _damage;
-}
+int	AWeapon::getDamage(void) const { return _damage; }
 
-int	AWeapon::getAPCost(void) const
-{
-	return _actionPoints;
-}
+int	AWeapon::getAPCost(void) const { return _actionPoints; }
 
 AWeapon&	AWeapon::operator = (AWeapon const &other)
 {

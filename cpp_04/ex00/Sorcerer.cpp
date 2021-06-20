@@ -6,25 +6,16 @@ Sorcerer::Sorcerer(std::string const &name, std::string const &title)
 	std::cout << _name << ", "  << _title << ", is born!" << std::endl;
 }
 
-Sorcerer::Sorcerer(Sorcerer const &other)
-{
-	*this = other;
-}
+Sorcerer::Sorcerer(Sorcerer const &other) { *this = other; }
 
 Sorcerer::~Sorcerer(void)
 {
 	std::cout << _name << ", " << _title << ", is dead. Consequences will never be the same!" << std::endl;
 }
 
-std::string	Sorcerer::getName(void) const
-{
-	return _name;
-}
+std::string	Sorcerer::getName(void) const { return _name; }
 
-std::string Sorcerer::getTitle(void) const
-{
-	return _title;
-}
+std::string Sorcerer::getTitle(void) const { return _title; }
 
 void Sorcerer::polymorph(Victim const &victim) const
 {

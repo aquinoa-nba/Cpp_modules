@@ -6,10 +6,7 @@ Character::Character(std::string const & name)
 	std::cout << GREEN "Constructor for Character called" << std::endl;
 }
 
-Character::Character(Character const &other)
-{
-	*this = other;
-}
+Character::Character(Character const &other) { *this = other; }
 
 Character::~Character(void)
 {
@@ -60,20 +57,11 @@ void	Character::attack(Enemy *enemy)
 		std::cout << "Enemy " << enemy->getType() << " is already dead" << std::endl;
 }
 
-std::string	Character::getName(void) const
-{
-	return _name;
-}
+std::string	Character::getName(void) const { return _name; }
 
-int	Character::getAPCost(void) const
-{
-	return _actionPoints;
-}
+int	Character::getAPCost(void) const { return _actionPoints; }
 
-AWeapon*	Character::getWeapon(void) const
-{
-	return _weapon;
-}
+AWeapon*	Character::getWeapon(void) const { return _weapon; }
 
 Character&	Character::operator = (Character const &other)
 {

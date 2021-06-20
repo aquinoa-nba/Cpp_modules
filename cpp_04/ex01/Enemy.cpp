@@ -5,25 +5,16 @@ Enemy::Enemy(int hp, std::string const &type) : _hp(hp), _type(type)
 	std::cout << NO_COLOR "Constructor for Enemy called" << std::endl;
 }
 
-Enemy::Enemy(Enemy const &other)
-{
-	*this = other;
-}
+Enemy::Enemy(Enemy const &other) { *this = other; }
 
 Enemy::~Enemy(void)
 {
 	std::cout << NO_COLOR "Destructor for Enemy called" << std::endl;
 }
 
-int	Enemy::getHP(void) const
-{
-	return _hp;
-}
+int	Enemy::getHP(void) const { return _hp; }
 
-std::string	Enemy::getType(void) const
-{
-	return _type;
-}
+std::string	Enemy::getType(void) const { return _type; }
 
 void	Enemy::takeDamage(int damage)
 {
