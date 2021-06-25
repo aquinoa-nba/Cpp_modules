@@ -24,8 +24,8 @@ void*	serialize(void)
 	char	*data = new char[52];
 	int		rndmInt;
 
-	rndmInt = rand() % 1024;
 	srand(time(NULL));
+	rndmInt = rand() % 1024;
 	memcpy(data, &rndmStr[rand() % 3], 24);
 	memcpy(data + 24, &rndmInt, 4);
 	memcpy(data + 28, &rndmStr[rand() % 3], 24);

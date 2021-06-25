@@ -129,7 +129,7 @@ std::ostream&	operator << (std::ostream &out, Convert const &val)
 	{
 		out << "char: impossible\n";
 		out << "int: impossible\n";
-		if (val.getArg() == "nan")
+		if (val.getArg() == "nan" || val.getArg() == "nanf")
 		{
 			out << "float: nanf\n";
 			out << "double: nan\n";
