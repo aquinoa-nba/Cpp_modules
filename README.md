@@ -1,4 +1,4 @@
-# CPP_Module
+# CPP_Modules
 
 #### Module00: Знакомство с языком C++<br>
 #### Module01: Различие ссылки от указателя<br>
