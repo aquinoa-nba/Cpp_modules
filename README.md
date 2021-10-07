@@ -1,6 +1,6 @@
 # CPP_Modules
 
-Non-trivial tasks in C ++<br>
+Non-trivial tasks in C++<br>
 Familiarity with the language, OOP, error handling,<br>
 castes, templates, containers and iterators<br><br>
 
