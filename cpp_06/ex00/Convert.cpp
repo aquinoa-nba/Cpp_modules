@@ -139,7 +139,7 @@ std::ostream&	operator << (std::ostream &out, Convert const &val)
 			out << "float: inff\n";
 			out << "double: inf\n";
 		}
-		else if (val.getArg() == "-inf" || val.getArg() == "-inff" || val.getArg() == "-inf" || val.getArg() == "-inff")
+		else if (val.getArg() == "-inf" || val.getArg() == "-inff")
 		{
 			out << "float: -inff\n";
 			out << "double: -inf\n";
