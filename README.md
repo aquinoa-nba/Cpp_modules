@@ -9,7 +9,7 @@ castes, templates, containers and iterators<br><br>
 #### Module02: Фиксированная точка<br>
 #### Module03: Наследование и Инкапсуляция<br>
 #### Module04: Полиморфизм<br>
-#### Module05: Вылавливание ошибок<br>
-#### Module06: Приведние типов<br>
-#### Module07: Шаблоные типы<br>
+#### Module05: Исключения<br>
+#### Module06: Приведение типов<br>
+#### Module07: Шаблоны<br>
 #### Module08: Итераторы
